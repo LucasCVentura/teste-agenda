@@ -1,0 +1,141 @@
+@import 'themes/common.variables'
+
+// FLEXBOX CSS
+.flex-grow-1
+  flex 1
+
+
+.page-flexbox
+  padding 20px
+  display flex
+  min-height 100vh
+  flex-direction column
+
+
+// CLASSES DE CORES
+// -> Background (color)
+.bg-fundo
+  background $fundo
+
+.bg-azul1
+  background $azul1
+
+.bg-purpura
+  background $purpura
+
+.bg-cinza1
+  background $cinza1
+.bg-cinza2
+  background: $cinza2
+
+.bg-cinza3
+  background $cinza3
+
+.bg-cinza4
+  background $cinza4
+
+.bg-red
+  background: $vermelho
+.bg-red2
+  background: $vermelho2
+
+.bg-red3
+  background: $vermelho3
+
+// -> Texto (text-color)
+.text-azul1
+  color $azul1
+
+.text-explicativo
+  color $cinza3
+
+.text-cinza1
+  color $cinza1
+
+// -> Borda (border)
+.border-azul1
+  border solid 1px $azul1
+
+
+// CLASSES GLOBAIS
+.agenda-modal
+  max-width 55rem
+  margin 0 auto
+  text-align center
+
+.layout-agenda
+  @extends .agenda-modal
+  overflow-y auto
+
+body
+  @extends .layout-agenda, .bg-fundo
+
+.page-loading
+  background rgba(130, 130, 130, 0.4)
+
+.assist-left
+  border-radius 50%
+  max-width 150px
+  height auto
+
+.assist-center
+  @extend .assist-left
+  display block
+
+.assist-left-container
+  display flex
+  align-items center
+
+.q-mt-sm-negative
+  margin-top -8px
+
+.inherit
+  display inherit
+
+.right-0
+  right 0
+
+// COMPONENTES ESPECÍFICOS
+.qCard-fix
+  .q-card-title
+    padding-top 12px
+
+.qCardTitle-fix
+  line-height 1.3rem !important
+
+.horarioLabel
+  .q-field-label-inner
+    @extends .text-azul1
+
+.dbCollapsible
+  .q-item
+    @extends .bg-cinza4
+
+.qSelect-fix
+  .q-input-target
+    width 0px
+
+.q-popover
+  .q-list
+    .q-item
+      font-size 14px
+
+@media (max-width: 576px)
+  .assist-left, .assist-center
+      max-width 130px
+
+  .page-flexbox    
+    min-height 90vh
+    
+
+  .assistente-sidetext
+    text-align center
+    margin-top 12px
+
+body.mobile .q-tabs-scroller
+  overflow-x hidden !important
+
+// Fix do q-btn com rota no MS Edge
+@supports (-ms-ime-align: auto)
+  a:not(.q-btn-round).q-btn
+    height auto

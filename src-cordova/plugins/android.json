@@ -1,0 +1,24 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "org.cordova.quasar.mediagenda"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "org.cordova.quasar.mediagenda"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "org.cordova.quasar.mediagenda"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.cordova.quasar.mediagenda"
+    }
+  },
+  "dependent_plugins": {}
+}
